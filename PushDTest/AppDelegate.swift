@@ -15,6 +15,7 @@ import PushSDK
 public class AppDelegate: UIResponder, UIApplicationDelegate {
     let fb_ad = PushSDKFirebase.init()
     
+
     public var window: UIWindow?
     
     @IBOutlet weak var sentNotificationLabel: UILabel!
@@ -25,6 +26,8 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         fb_ad.fbInitApplication(didFinishLaunchingWithOptions: launchOptions)
         //application.registerForRemoteNotifications()
+        application.registerForRemoteNotifications()
+        fb_ad.registerForPushNotifications()
         UNUserNotificationCenter.current().delegate = self
         return true
     }
@@ -51,49 +54,19 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-
-public extension UIViewController
-{
-    func hideKeyboard()
-    {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(UIViewController.dismissKeyboard))
-        
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
+extension AppDelegate: MessagingDelegate {
+    
+    @IBAction func notify() {
+        fb_ad.fb_notify_messaging()
     }
     
-    @objc func dismissKeyboard()
-    {
-        view.endEditing(true)
+    public func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        fb_ad.fb_remote_messaging(remoteMessage: remoteMessage.appData as NSDictionary)
+    }
+    
+    public func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        fb_ad.fb_token_messaging(didReceiveRegistrationToken: fcmToken )
     }
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate{
-    
-    public func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                       willPresent notification: UNNotification,
-                                       withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound, .badge])
-    }
-    
-    public func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                       didReceive response: UNNotificationResponse,
-                                       withCompletionHandler completionHandler: @escaping () -> Void) {
-        completionHandler()
-    }
-}
 
-extension ViewController: UNUserNotificationCenterDelegate {
-    
-    //for displaying notification when app is in foreground
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .badge, .sound])
-    }
-    
-    // For handling tap and user actions
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        completionHandler()
-    }
-}
