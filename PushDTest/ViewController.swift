@@ -13,7 +13,7 @@ import UserNotifications
 class ViewController: UIViewController {
     
 
-    let pushAdapterSdk = PushSDK.init(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_DEBUG, basePushURL: "https://example.com/api/")
+    let pushAdapterSdk = PushSDK.init(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_DEBUG, basePushURL: "https://test-example.com/api/")
     
     //for production
     //let pushAdapterSdk = PushSDK.init(basePushURL: "https://example.com/api/")
