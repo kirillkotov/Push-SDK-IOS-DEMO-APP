@@ -33,7 +33,6 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication,  didReceiveRemoteNotification userInfo: [NSObject : AnyObject],  fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-        
         fb_ad.fbInitApplication(didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
     }
     
@@ -54,19 +53,5 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: MessagingDelegate {
-    
-    @IBAction func notify() {
-        fb_ad.fb_notify_messaging()
-    }
-    
-    public func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-        fb_ad.fb_remote_messaging(remoteMessage: remoteMessage.appData as NSDictionary)
-    }
-    
-    public func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        fb_ad.fb_token_messaging(didReceiveRegistrationToken: fcmToken )
-    }
-}
 
 

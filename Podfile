@@ -6,14 +6,14 @@ target 'PushDTest' do
   use_frameworks!
 
   # Pods for imperituroard
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'Firebase/AdMob'
-  pod 'Firebase/Database'
-  pod 'Firebase/Messaging'
-  pod 'Firebase'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Firestore'
+  #pod 'Firebase/Core'
+  #pod 'Firebase/Auth'
+  #pod 'Firebase/AdMob'
+  #pod 'Firebase/Database'
+  #pod 'Firebase/Messaging'
+  #pod 'Firebase'
+  #pod 'Firebase/Storage'
+  #pod 'Firebase/Firestore'
   #pod 'Firebase/Installations'
   #pod 'Google-Mobile-Ads-SDK'
   pod 'CryptoSwift', '1.0.0'
