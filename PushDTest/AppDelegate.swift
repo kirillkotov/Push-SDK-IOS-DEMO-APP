@@ -28,16 +28,22 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         //application.registerForRemoteNotifications()
         application.registerForRemoteNotifications()
         fb_ad.registerForPushNotifications()
-        UNUserNotificationCenter.current().delegate = self
+        //UNUserNotificationCenter.current().delegate = self
         return true
     }
     
     func application(application: UIApplication,  didReceiveRemoteNotification userInfo: [NSObject : AnyObject],  fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         fb_ad.fbInitApplication(didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dfsdfd"), object: self)
+
     }
     
     public func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        
+        print("foreground")
         fb_ad.fbInitApplication(didReceiveRemoteNotification: userInfo)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dfsdfd"), object: self)
+
     }
     
     
@@ -45,6 +51,8 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
                             fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         fb_ad.fbInitApplication(didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dfsdfd"), object: self)
+
     }
     
     
