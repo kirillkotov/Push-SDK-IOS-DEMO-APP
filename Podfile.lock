@@ -66,7 +66,7 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
-  - PushSDK (1.0.0.34):
+  - PushSDK (1.0.0.37):
     - BoringSSL-GRPC
     - CryptoSwift (= 1.0.0)
     - Firebase/Installations
@@ -108,7 +108,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PushSDK:
-    :commit: 8e60dcedcb000fb550dcec9f10ac9bdfe1ca48ab
+    :commit: ee3035ff894eb7580392a97dc851eb12f37497c0
     :git: https://github.com/kirillkotov/Push-SDK-IOS
 
 SPEC CHECKSUMS:
@@ -125,7 +125,7 @@ SPEC CHECKSUMS:
   JSON: 93622160a062588b4cd3497b77ccd777f1fd0587
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
-  PushSDK: f59494eb7707d9f2c4761e085d7032d19d8c879a
+  PushSDK: dd323eb75515d3543ae3d43beae55b99157c4181
   SwiftyBeaver: b8239f6bfe9e1ea3303e6139abc8c24228081d84
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 

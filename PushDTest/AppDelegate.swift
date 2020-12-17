@@ -28,6 +28,10 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         fb_ad.registerForPushNotifications()
         UNUserNotificationCenter.current().delegate = self
+        
+        //disable badge icon
+        //application.applicationIconBadgeNumber = 0;
+        
         return true
     }
     

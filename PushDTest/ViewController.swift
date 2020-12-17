@@ -13,10 +13,10 @@ import UserNotifications
 class ViewController: UIViewController {
     
 
-    let pushAdapterSdk = PushSDK.init(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_ERROR, basePushURL: "https://test-push.hyber.im/api/")
+    let pushAdapterSdk = PushSDK.init(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_DEBUG, basePushURL: "https://test.com/api/")
     
     //for production
-    //let pushAdapterSdk = PushSDK.init(basePushURL: "https://push.hyber.im/api/")
+    //let pushAdapterSdk = PushSDK.init(basePushURL: "https://example.com/api/")
     
 
     override func viewDidLoad() {
@@ -119,7 +119,7 @@ extension ViewController: UNUserNotificationCenterDelegate {
         
         //If you don't want to show notification when app is open, do something here else and make a return here.
         //Even you you don't implement this delegate method, you will not see the notification on the specified controller. So, you have to implement this delegate and make sure the below line execute. i.e. completionHandler.
-        print("Notification center")
+        print("#############Notification center###############")
         print(notification.request.content.body)
         print(notification.request.content.title)
         print(notification.request.content.subtitle)
@@ -127,7 +127,9 @@ extension ViewController: UNUserNotificationCenterDelegate {
         let incomMessage = PushSDK.parseIncomingPush(message: notification.request.content.userInfo)
         print(incomMessage)
         print(incomMessage.messageFir.message.messageId ?? "")
-        
+        print(incomMessage.messageFir.message.phone ?? "")
+        print(incomMessage.messageFir.message.image?.url ?? "")
+        print("###############################################")
         completionHandler([.alert, .badge, .sound])
     }
     
