@@ -20,19 +20,6 @@
 		BA73DA4523373D69008F3136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA4323373D69008F3136 /* LaunchScreen.storyboard */; };
 		BA73DA5023373D69008F3136 /* PushDTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA73DA4F23373D69008F3136 /* PushDTestTests.swift */; };
 		BA73DA5B23373D69008F3136 /* PushDTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA73DA5A23373D69008F3136 /* PushDTestUITests.swift */; };
-		BA73DA7123377720008F3136 /* star-40.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA7023377720008F3136 /* star-40.png */; };
-		BA73DA7323377763008F3136 /* star-20.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA7223377763008F3136 /* star-20.png */; };
-		BA73DA752337779E008F3136 /* star-60.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA742337779E008F3136 /* star-60.png */; };
-		BA73DA77233777A4008F3136 /* star-29.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA76233777A4008F3136 /* star-29.png */; };
-		BA73DA79233777AA008F3136 /* star-80.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA78233777AA008F3136 /* star-80.png */; };
-		BA73DA7B233777F5008F3136 /* star-120.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA7A233777F5008F3136 /* star-120.png */; };
-		BA73DA7D233777FA008F3136 /* star-180.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA7C233777FA008F3136 /* star-180.png */; };
-		BA73DA7F23377855008F3136 /* star-58.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA7E23377855008F3136 /* star-58.png */; };
-		BA73DA812337785A008F3136 /* star-87.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA802337785A008F3136 /* star-87.png */; };
-		BA73DA832337788C008F3136 /* star-76.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA822337788C008F3136 /* star-76.png */; };
-		BA73DA8523377892008F3136 /* star-152.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA8423377892008F3136 /* star-152.png */; };
-		BA73DA87233778CC008F3136 /* star-167.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA86233778CC008F3136 /* star-167.png */; };
-		BA73DA8B23377B29008F3136 /* kisspng-star-computer-icons-green-clip-art-5b009032c6f1e6.3350966915267635708149.png in Resources */ = {isa = PBXBuildFile; fileRef = BA73DA8A23377B29008F3136 /* kisspng-star-computer-icons-green-clip-art-5b009032c6f1e6.3350966915267635708149.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,19 +63,6 @@
 		BA73DA5623373D69008F3136 /* PushDTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushDTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA73DA5A23373D69008F3136 /* PushDTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDTestUITests.swift; sourceTree = "<group>"; };
 		BA73DA5C23373D69008F3136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA73DA7023377720008F3136 /* star-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-40.png"; sourceTree = "<group>"; };
-		BA73DA7223377763008F3136 /* star-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-20.png"; sourceTree = "<group>"; };
-		BA73DA742337779E008F3136 /* star-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-60.png"; sourceTree = "<group>"; };
-		BA73DA76233777A4008F3136 /* star-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-29.png"; sourceTree = "<group>"; };
-		BA73DA78233777AA008F3136 /* star-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-80.png"; sourceTree = "<group>"; };
-		BA73DA7A233777F5008F3136 /* star-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-120.png"; sourceTree = "<group>"; };
-		BA73DA7C233777FA008F3136 /* star-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-180.png"; sourceTree = "<group>"; };
-		BA73DA7E23377855008F3136 /* star-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-58.png"; sourceTree = "<group>"; };
-		BA73DA802337785A008F3136 /* star-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-87.png"; sourceTree = "<group>"; };
-		BA73DA822337788C008F3136 /* star-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-76.png"; sourceTree = "<group>"; };
-		BA73DA8423377892008F3136 /* star-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-152.png"; sourceTree = "<group>"; };
-		BA73DA86233778CC008F3136 /* star-167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-167.png"; sourceTree = "<group>"; };
-		BA73DA8A23377B29008F3136 /* kisspng-star-computer-icons-green-clip-art-5b009032c6f1e6.3350966915267635708149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kisspng-star-computer-icons-green-clip-art-5b009032c6f1e6.3350966915267635708149.png"; sourceTree = "<group>"; };
 		BA98B18A233F884A00FBB687 /* PushDTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDTest.entitlements; sourceTree = "<group>"; };
 		E8C5AF0550CD49726F36A1B7 /* Pods-PushDTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushDTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-PushDTestUITests/Pods-PushDTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0EE0E006CAF5AC947429035 /* Pods_PushDTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PushDTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,19 +141,6 @@
 				BA73DA3923373D67008F3136 /* ViewController.swift */,
 				BA73DA3B23373D67008F3136 /* Main.storyboard */,
 				BA73DA4123373D69008F3136 /* Assets.xcassets */,
-				BA73DA7223377763008F3136 /* star-20.png */,
-				BA73DA76233777A4008F3136 /* star-29.png */,
-				BA73DA7023377720008F3136 /* star-40.png */,
-				BA73DA7E23377855008F3136 /* star-58.png */,
-				BA73DA742337779E008F3136 /* star-60.png */,
-				BA73DA822337788C008F3136 /* star-76.png */,
-				BA73DA78233777AA008F3136 /* star-80.png */,
-				BA73DA802337785A008F3136 /* star-87.png */,
-				BA73DA7A233777F5008F3136 /* star-120.png */,
-				BA73DA8423377892008F3136 /* star-152.png */,
-				BA73DA86233778CC008F3136 /* star-167.png */,
-				BA73DA7C233777FA008F3136 /* star-180.png */,
-				BA73DA8A23377B29008F3136 /* kisspng-star-computer-icons-green-clip-art-5b009032c6f1e6.3350966915267635708149.png */,
 				BA73DA4323373D69008F3136 /* LaunchScreen.storyboard */,
 				BA73DA4623373D69008F3136 /* Info.plist */,
 				BA73DA3E23373D67008F3136 /* PushDTest.xcdatamodeld */,
@@ -331,22 +292,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA73DA77233777A4008F3136 /* star-29.png in Resources */,
 				BA35BBF223975C7B00DF5BA1 /* GoogleService-Info.plist in Resources */,
-				BA73DA7D233777FA008F3136 /* star-180.png in Resources */,
-				BA73DA8523377892008F3136 /* star-152.png in Resources */,
-				BA73DA7F23377855008F3136 /* star-58.png in Resources */,
-				BA73DA7323377763008F3136 /* star-20.png in Resources */,
-				BA73DA812337785A008F3136 /* star-87.png in Resources */,
-				BA73DA87233778CC008F3136 /* star-167.png in Resources */,
-				BA73DA752337779E008F3136 /* star-60.png in Resources */,
-				BA73DA7123377720008F3136 /* star-40.png in Resources */,
 				BA0E73D8234A9719005FC57B /* Podfile in Resources */,
 				BA73DA4523373D69008F3136 /* LaunchScreen.storyboard in Resources */,
-				BA73DA832337788C008F3136 /* star-76.png in Resources */,
-				BA73DA79233777AA008F3136 /* star-80.png in Resources */,
-				BA73DA7B233777F5008F3136 /* star-120.png in Resources */,
-				BA73DA8B23377B29008F3136 /* kisspng-star-computer-icons-green-clip-art-5b009032c6f1e6.3350966915267635708149.png in Resources */,
 				BA73DA4223373D69008F3136 /* Assets.xcassets in Resources */,
 				BA73DA3D23373D67008F3136 /* Main.storyboard in Resources */,
 			);
