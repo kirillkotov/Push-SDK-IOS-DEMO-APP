@@ -8,6 +8,7 @@
 import UIKit
 import PushSDK
 import UserNotifications
+import MaterialComponents
 
 
 class ViewController: UIViewController {
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        txt1fiIn.label.text = "Phone number"
+        
         //register in notification center
         NotificationCenter.default.addObserver(self, selector: #selector(onReceiveFromPushServer(_:)), name: .receivePushKData, object: nil)
         UNUserNotificationCenter.current().delegate = self
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var textOutput: UITextView!
-    @IBOutlet weak var txt1fiIn: UITextField!
+    @IBOutlet weak var txt1fiIn: MDCOutlinedTextField!
     
     //clear message display field
     @IBAction func button1Click(_ sender: UIButton) {

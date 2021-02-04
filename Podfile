@@ -20,7 +20,12 @@ target 'PushDTest' do
   pod 'PushSDK', :git => 'https://github.com/kirillkotov/Push-SDK-IOS', :branch => 'master'
   pod 'JSON'
   pod 'SwiftyBeaver'
-
+  pod 'MaterialComponents/TextControls+FilledTextAreas'
+  pod 'MaterialComponents/TextControls+FilledTextFields'
+  pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+  pod 'MaterialComponents/TextControls+OutlinedTextFields'
+  pod 'MaterialComponents/Buttons'
+  
   target 'PushDTestTests' do
     inherit! :search_paths
     # Pods for testing
