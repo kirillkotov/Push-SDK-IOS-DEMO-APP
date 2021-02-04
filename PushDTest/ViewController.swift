@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     //for production
     //let pushAdapterSdk = PushSDK.init(basePushURL: "https://example.com/api/")
     
+    @IBOutlet var textOutput: UITextView!
+    @IBOutlet var txt1fiIn: MDCOutlinedTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,24 +36,30 @@ class ViewController: UIViewController {
     
     }
     
-    @IBOutlet weak var textOutput: UITextView!
-    @IBOutlet weak var txt1fiIn: MDCOutlinedTextField!
+    func setOutputText(text: String) {
+        if (!text.isEmpty) {
+            textOutput.text = text
+        }
+        else {
+            textOutput.text = "Empty yet"
+        }
+    }
     
     //clear message display field
-    @IBAction func button1Click(_ sender: UIButton) {
-        textOutput.text = ""
+    @IBAction func clearOutput(_ sender: UIButton) {
+        setOutputText(text: "")
     }
     
     //test button, register this device on push server
-    @IBAction func button2register(_ sender: UIButton) {
-        let tttt: PushKFunAnswerRegister = pushAdapterSdk.pushRegisterNew(user_phone: txt1fiIn.text ?? "375291234567", user_password: "1", x_push_ios_bundle_id: "12345678", X_Push_Client_API_Key: "test")
-        textOutput.text = "\(String(textOutput.text))\n\(tttt.toString())"
+    @IBAction func registerDevice(_ sender: UIButton) {
+        let result: PushKFunAnswerRegister = pushAdapterSdk.pushRegisterNew(user_phone: txt1fiIn.text ?? "375291234567", user_password: "1", x_push_ios_bundle_id: "12345678", X_Push_Client_API_Key: "test")
+        setOutputText(text: result.toString())
     }
     
     //test button, check message queue on server
-    @IBAction func button3core(_ sender: UIButton) {
-        let queue = pushAdapterSdk.pushCheckQueue()
-        textOutput.text = "\(String(textOutput.text))\n\(queue.toString())"
+    @IBAction func checkQueue(_ sender: UIButton) {
+        let result = pushAdapterSdk.pushCheckQueue()
+        setOutputText(text: result.toString())
     }
     
     //test button, unused
@@ -60,41 +68,46 @@ class ViewController: UIViewController {
     }
     
     //clear only local deviceid
-    @IBAction func button5clearself(_ sender: UIButton) {
-        textOutput.text = "\(String(textOutput.text))\n\(pushAdapterSdk.pushClearCurrentDevice().toString())"
+    @IBAction func unregisterCurrentDevice(_ sender: UIButton) {
+        let result = pushAdapterSdk.pushClearCurrentDevice()
+        setOutputText(text: result.toString())
     }
     
     //get all devices from server registered for current msisdn
-    @IBAction func button6getdevice(_ sender: UIButton) {
-        textOutput.text = "\(String(textOutput.text))\n\(pushAdapterSdk.pushGetDeviceAllFromServer().toString())"
+    @IBAction func getAllDevices(_ sender: UIButton) {
+        let result = pushAdapterSdk.pushGetDeviceAllFromServer()
+        setOutputText(text: result.toString())
     }
     
     //send test callback message to specific message
-    @IBAction func button7callback(_ sender: UIButton) {
-        textOutput.text = "\(String(textOutput.text))\n\(pushAdapterSdk.pushSendMessageCallback(message_id: "test", message_text: "privet").toString())"
+    @IBAction func sendTestMessage(_ sender: UIButton) {
+        let result = pushAdapterSdk.pushSendMessageCallback(message_id: "test", message_text: "privet")
+        setOutputText(text: result.toString())
     }
     
     
     //send delivery report for test with fake message id
-    @IBAction func button8dr(_ sender: UIButton) {
-        textOutput.text = "\(String(textOutput.text))\n\(pushAdapterSdk.pushMessageDeliveryReport(message_id: "1251fqf4").toString())"
+    @IBAction func getMessageDeliveryReport(_ sender: UIButton) {
+        let result = pushAdapterSdk.pushMessageDeliveryReport(message_id: "1251fqf4")
+        setOutputText(text: result.toString())
     }
     
     //token update on server test button
-    @IBAction func button9update(_ sender: UIButton) {
-        textOutput.text = "\(String(textOutput.text))\n\(pushAdapterSdk.pushUpdateRegistration().toString())"
+    @IBAction func updateRegistration(_ sender: UIButton) {
+        let result = pushAdapterSdk.pushUpdateRegistration()
+        setOutputText(text: result.toString())
     }
     
     //get message history test button
-    @IBAction func button10gethistory(_ sender: UIButton) {
-        let hist: PushKFunAnswerGetMessageHistory = pushAdapterSdk.pushGetMessageHistory(period_in_seconds: 12345)
-        textOutput.text = "\(String(textOutput.text))\n\(hist.toString())"
+    @IBAction func getMessageHistory(_ sender: UIButton) {
+        let result: PushKFunAnswerGetMessageHistory = pushAdapterSdk.pushGetMessageHistory(period_in_seconds: 12345)
+        setOutputText(text: result.toString())
     }
     
     //clear all registered devices test button
-    @IBAction func button11clearall(_ sender: Any) {
-        let cle_p = pushAdapterSdk.pushClearAllDevice()
-        textOutput.text = "\(String(textOutput.text))\n\(cle_p.toString())"
+    @IBAction func unregisterAllDevices(_ sender: Any) {
+        let result = pushAdapterSdk.pushClearAllDevice()
+        setOutputText(text: result.toString())
     }
 }
 

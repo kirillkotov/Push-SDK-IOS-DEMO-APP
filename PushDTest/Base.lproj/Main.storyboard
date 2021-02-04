@@ -22,7 +22,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-bu-6Mk" userLabel="text1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" editable="NO" text="Empty yet" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yxg-bu-6Mk" userLabel="text1">
                                 <rect key="frame" x="20" y="69" width="374" height="327.33333333333331"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +51,7 @@
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button1Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMp-4A-qoL"/>
+                                                    <action selector="clearOutput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMp-4A-qoL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfy-GC-hr3" customClass="MDCButton">
@@ -62,7 +62,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button2register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZ0-fp-E3z"/>
+                                                    <action selector="registerDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZ0-fp-E3z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvQ-5X-kEd" customClass="MDCButton">
@@ -73,7 +73,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button5clearself:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5P-y3-8Ti"/>
+                                                    <action selector="unregisterCurrentDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5P-y3-8Ti"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZU-47-m6d" customClass="MDCButton">
@@ -84,7 +84,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button10gethistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kI7-v6-RBt"/>
+                                                    <action selector="getMessageHistory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kI7-v6-RBt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-gU-ADN" customClass="MDCButton">
@@ -95,7 +95,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button6getdevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCP-4V-y97"/>
+                                                    <action selector="getAllDevices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCP-4V-y97"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iou-ew-sUL" customClass="MDCButton">
@@ -106,7 +106,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button9update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grl-v4-tmb"/>
+                                                    <action selector="updateRegistration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grl-v4-tmb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phi-8X-dfZ" customClass="MDCButton">
@@ -117,7 +117,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button7callback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opS-Tv-cKO"/>
+                                                    <action selector="sendTestMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opS-Tv-cKO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i62-DX-gRb" customClass="MDCButton">
@@ -128,7 +128,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button8dr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbX-zl-F0J"/>
+                                                    <action selector="getMessageDeliveryReport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbX-zl-F0J"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx2-0f-ts6" customClass="MDCButton">
@@ -139,7 +139,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button3core:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcd-mA-btC"/>
+                                                    <action selector="checkQueue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcd-mA-btC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YU-kR-OYt" customClass="MDCButton">
@@ -161,7 +161,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="button11clearall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVa-gw-ZgG"/>
+                                                    <action selector="unregisterAllDevices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVa-gw-ZgG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
