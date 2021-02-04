@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textOutput.layer.borderColor = UIColor.gray.cgColor
+        textOutput.layer.borderWidth = 2
+        textOutput.layer.cornerRadius = 5
         txt1fiIn.label.text = "Phone number"
         
         //register in notification center
