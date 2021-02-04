@@ -13,7 +13,9 @@ import MaterialComponents
 
 class ViewController: UIViewController {
     
-
+    /**
+     PushSDK instance
+     */
     let pushAdapterSdk = PushSDK.init(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_DEBUG, basePushURL: "https://test.com/api/")
     
     //for production
@@ -36,6 +38,9 @@ class ViewController: UIViewController {
     
     }
     
+    /**
+     Set the output text
+     */
     func setOutputText(text: String) {
         if (!text.isEmpty) {
             textOutput.text = text
@@ -45,66 +50,88 @@ class ViewController: UIViewController {
         }
     }
     
-    //clear message display field
+    /**
+     Clear the output text
+     */
     @IBAction func clearOutput(_ sender: UIButton) {
         setOutputText(text: "")
     }
     
-    //test button, register this device on push server
+    /**
+     Register device on the server
+     */
     @IBAction func registerDevice(_ sender: UIButton) {
         let result: PushKFunAnswerRegister = pushAdapterSdk.pushRegisterNew(user_phone: txt1fiIn.text ?? "375291234567", user_password: "1", x_push_ios_bundle_id: "12345678", X_Push_Client_API_Key: "test")
         setOutputText(text: result.toString())
     }
     
-    //test button, check message queue on server
+    /**
+     Check message queue
+     */
     @IBAction func checkQueue(_ sender: UIButton) {
         let result = pushAdapterSdk.pushCheckQueue()
         setOutputText(text: result.toString())
     }
     
-    //test button, unused
+    /**
+     Unused
+     */
     @IBAction func button4savecore(_ sender: UIButton) {
         //test
     }
     
-    //clear only local deviceid
+    /**
+     Unregister current device
+     */
     @IBAction func unregisterCurrentDevice(_ sender: UIButton) {
         let result = pushAdapterSdk.pushClearCurrentDevice()
         setOutputText(text: result.toString())
     }
     
-    //get all devices from server registered for current msisdn
+    /**
+     Get all registered devices
+     */
     @IBAction func getAllDevices(_ sender: UIButton) {
         let result = pushAdapterSdk.pushGetDeviceAllFromServer()
         setOutputText(text: result.toString())
     }
     
-    //send test callback message to specific message
+    /**
+     Send test message
+     */
     @IBAction func sendTestMessage(_ sender: UIButton) {
         let result = pushAdapterSdk.pushSendMessageCallback(message_id: "test", message_text: "privet")
         setOutputText(text: result.toString())
     }
     
     
-    //send delivery report for test with fake message id
+    /**
+     Get message delivery report
+     */
     @IBAction func getMessageDeliveryReport(_ sender: UIButton) {
         let result = pushAdapterSdk.pushMessageDeliveryReport(message_id: "1251fqf4")
         setOutputText(text: result.toString())
     }
     
-    //token update on server test button
+    /**
+     Update device registration
+     */
     @IBAction func updateRegistration(_ sender: UIButton) {
         let result = pushAdapterSdk.pushUpdateRegistration()
         setOutputText(text: result.toString())
     }
     
-    //get message history test button
+    /**
+     Get message history
+     */
     @IBAction func getMessageHistory(_ sender: UIButton) {
         let result: PushKFunAnswerGetMessageHistory = pushAdapterSdk.pushGetMessageHistory(period_in_seconds: 12345)
         setOutputText(text: result.toString())
     }
     
-    //clear all registered devices test button
+    /**
+     Unregister all devices
+     */
     @IBAction func unregisterAllDevices(_ sender: Any) {
         let result = pushAdapterSdk.pushClearAllDevice()
         setOutputText(text: result.toString())
@@ -133,7 +160,9 @@ public extension UIViewController
 
 extension ViewController: UNUserNotificationCenterDelegate {
     
-    //for displaying notification when app is in foreground
+    /**
+     For displaying notification when app is in foreground
+     */
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         //If you don't want to show notification when app is open, do something here else and make a return here.
@@ -152,12 +181,16 @@ extension ViewController: UNUserNotificationCenterDelegate {
         completionHandler([.alert, .badge, .sound])
     }
     
-    // For handling tap and user actions
+    /**
+     For handling tap and user actions
+     */
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
     }
     
-    //processing incoming data message
+    /**
+     Processing incoming data message
+     */
     @objc func onReceiveFromPushServer(_ notification: Notification) {
         // Do something now
         let incomMessage = PushSDK.parseIncomingPush(message: notification).messageFir
