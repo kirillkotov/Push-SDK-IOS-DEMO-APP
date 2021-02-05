@@ -25,6 +25,7 @@ target 'PushDTest' do
   pod 'MaterialComponents/TextControls+OutlinedTextAreas'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
   pod 'MaterialComponents/Buttons'
+  pod 'MaterialComponents/AppBar'
   
   target 'PushDTestTests' do
     inherit! :search_paths

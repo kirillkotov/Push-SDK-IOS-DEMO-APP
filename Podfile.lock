@@ -61,7 +61,22 @@ PODS:
     - GoogleUtilities/Logger
   - JSON (5.0.0)
   - MaterialComponents/AnimationTiming (121.0.1)
+  - MaterialComponents/AppBar (121.0.1):
+    - MaterialComponents/FlexibleHeader
+    - MaterialComponents/HeaderStackView
+    - MaterialComponents/NavigationBar
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Icons/ic_arrow_back
+    - MaterialComponents/private/UIMetrics
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Availability (121.0.1)
+  - MaterialComponents/ButtonBar (121.0.1):
+    - MaterialComponents/Buttons
+    - MaterialComponents/private/Application
+    - MDFInternationalization
   - MaterialComponents/Buttons (121.0.1):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -78,13 +93,38 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/FlexibleHeader (121.0.1):
+    - MaterialComponents/Availability
+    - MaterialComponents/Elevation
+    - "MaterialComponents/FlexibleHeader+ShiftBehavior"
+    - "MaterialComponents/FlexibleHeader+ShiftBehaviorEnabledWithStatusBar"
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/UIMetrics
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MDFTextAccessibility
+  - "MaterialComponents/FlexibleHeader+ShiftBehavior (121.0.1)"
+  - "MaterialComponents/FlexibleHeader+ShiftBehaviorEnabledWithStatusBar (121.0.1)":
+    - "MaterialComponents/FlexibleHeader+ShiftBehavior"
+  - MaterialComponents/HeaderStackView (121.0.1)
   - MaterialComponents/Ink (121.0.1):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/NavigationBar (121.0.1):
+    - MaterialComponents/ButtonBar
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
   - MaterialComponents/private/Application (121.0.1)
   - MaterialComponents/private/Color (121.0.1):
     - MaterialComponents/Availability
+  - MaterialComponents/private/Icons/Base (121.0.1)
+  - MaterialComponents/private/Icons/ic_arrow_back (121.0.1):
+    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/Math (121.0.1)
   - "MaterialComponents/private/TextControlsPrivate+BaseStyle (121.0.1)":
     - MaterialComponents/AnimationTiming
@@ -113,6 +153,8 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Math
     - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - MaterialComponents/private/UIMetrics (121.0.1):
+    - MaterialComponents/private/Application
   - MaterialComponents/Ripple (121.0.1):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
@@ -180,6 +222,7 @@ PODS:
 DEPENDENCIES:
   - CryptoSwift (= 1.0.0)
   - JSON
+  - MaterialComponents/AppBar
   - MaterialComponents/Buttons
   - "MaterialComponents/TextControls+FilledTextAreas"
   - "MaterialComponents/TextControls+FilledTextFields"
@@ -240,6 +283,6 @@ SPEC CHECKSUMS:
   SwiftyBeaver: b8239f6bfe9e1ea3303e6139abc8c24228081d84
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: a0a1c626cf2f95fff793300bebb6d5fd1cc87439
+PODFILE CHECKSUM: fa761d327d5fd4a81f954182bc95f9cc780cb6de
 
 COCOAPODS: 1.10.1
