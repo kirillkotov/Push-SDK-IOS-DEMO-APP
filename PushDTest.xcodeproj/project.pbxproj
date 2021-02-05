@@ -135,14 +135,14 @@
 		BA73DA3623373D67008F3136 /* PushDTest */ = {
 			isa = PBXGroup;
 			children = (
+				BA73DA4123373D69008F3136 /* Assets.xcassets */,
 				BA98B18A233F884A00FBB687 /* PushDTest.entitlements */,
-				BA70F7F923533A080038A7D4 /* AppDelegate.swift */,
+				BA73DA4623373D69008F3136 /* Info.plist */,
 				BA35BBF123975C7B00DF5BA1 /* GoogleService-Info.plist */,
+				BA73DA4323373D69008F3136 /* LaunchScreen.storyboard */,
+				BA70F7F923533A080038A7D4 /* AppDelegate.swift */,
 				BA73DA3923373D67008F3136 /* ViewController.swift */,
 				BA73DA3B23373D67008F3136 /* Main.storyboard */,
-				BA73DA4123373D69008F3136 /* Assets.xcassets */,
-				BA73DA4323373D69008F3136 /* LaunchScreen.storyboard */,
-				BA73DA4623373D69008F3136 /* Info.plist */,
 				BA73DA3E23373D67008F3136 /* PushDTest.xcdatamodeld */,
 			);
 			path = PushDTest;
