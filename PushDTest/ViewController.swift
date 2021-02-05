@@ -16,10 +16,10 @@ class ViewController: UIViewController {
     /**
      PushSDK instance
      */
-    let pushAdapterSdk = PushSDK.init(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_DEBUG, basePushURL: "https://test.com/api/")
+    let pushSDK = PushSDK(platform_branch: PushSDKVar.branchMasterValue, log_level: PushSDKVar.LOGLEVEL_DEBUG, basePushURL: "https://test.com/api/")
     
     //for production
-    //let pushAdapterSdk = PushSDK.init(basePushURL: "https://example.com/api/")
+    //let pushAdapterSdk = PushSDK(basePushURL: "https://example.com/api/")
     
     @IBOutlet var textOutput: UITextView!
     @IBOutlet var txt1fiIn: MDCOutlinedTextField!
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
      Register device on the server
      */
     @IBAction func registerDevice(_ sender: UIButton) {
-        let result: PushKFunAnswerRegister = pushAdapterSdk.pushRegisterNew(user_phone: txt1fiIn.text ?? "375291234567", user_password: "1", x_push_ios_bundle_id: "12345678", X_Push_Client_API_Key: "test")
+        let result = pushSDK.pushRegisterNew(user_phone: txt1fiIn.text ?? "375291234567", user_password: "1", x_push_ios_bundle_id: "12345678", X_Push_Client_API_Key: "test")
         setOutputText(text: result.toString())
     }
     
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
      Check message queue
      */
     @IBAction func checkQueue(_ sender: UIButton) {
-        let result = pushAdapterSdk.pushCheckQueue()
+        let result = pushSDK.pushCheckQueue()
         setOutputText(text: result.toString())
     }
     
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
      Unregister current device
      */
     @IBAction func unregisterCurrentDevice(_ sender: UIButton) {
-        let result = pushAdapterSdk.pushClearCurrentDevice()
+        let result = pushSDK.pushClearCurrentDevice()
         setOutputText(text: result.toString())
     }
     
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
      Get all registered devices
      */
     @IBAction func getAllDevices(_ sender: UIButton) {
-        let result = pushAdapterSdk.pushGetDeviceAllFromServer()
+        let result = pushSDK.pushGetDeviceAllFromServer()
         setOutputText(text: result.toString())
     }
     
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
      Send test message
      */
     @IBAction func sendTestMessage(_ sender: UIButton) {
-        let result = pushAdapterSdk.pushSendMessageCallback(message_id: "test", message_text: "privet")
+        let result = pushSDK.pushSendMessageCallback(message_id: "test", message_text: "privet")
         setOutputText(text: result.toString())
     }
     
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
      Get message delivery report
      */
     @IBAction func getMessageDeliveryReport(_ sender: UIButton) {
-        let result = pushAdapterSdk.pushMessageDeliveryReport(message_id: "1251fqf4")
+        let result = pushSDK.pushMessageDeliveryReport(message_id: "1251fqf4")
         setOutputText(text: result.toString())
     }
     
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
      Update device registration
      */
     @IBAction func updateRegistration(_ sender: UIButton) {
-        let result = pushAdapterSdk.pushUpdateRegistration()
+        let result = pushSDK.pushUpdateRegistration()
         setOutputText(text: result.toString())
     }
     
@@ -125,7 +125,7 @@ class ViewController: UIViewController {
      Get message history
      */
     @IBAction func getMessageHistory(_ sender: UIButton) {
-        let result: PushKFunAnswerGetMessageHistory = pushAdapterSdk.pushGetMessageHistory(period_in_seconds: 12345)
+        let result = pushSDK.pushGetMessageHistory(period_in_seconds: 12345)
         setOutputText(text: result.toString())
     }
     
@@ -133,7 +133,7 @@ class ViewController: UIViewController {
      Unregister all devices
      */
     @IBAction func unregisterAllDevices(_ sender: Any) {
-        let result = pushAdapterSdk.pushClearAllDevice()
+        let result = pushSDK.pushClearAllDevice()
         setOutputText(text: result.toString())
     }
 }
