@@ -207,21 +207,40 @@
                                     <constraint firstItem="Yxg-bu-6Mk" firstAttribute="top" secondItem="7p6-e7-lc0" secondAttribute="bottom" constant="4" id="r7q-do-lBg"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et6-6c-4AI" userLabel="credentialsView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-HW-BMc" customClass="MDCButton">
+                                        <rect key="frame" x="164" y="352" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showMainView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FNy-3h-seo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="et6-6c-4AI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1ul-o9-hWZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="et6-6c-4AI" secondAttribute="bottom" id="HIZ-sb-TZc"/>
                             <constraint firstItem="fUI-3b-Ph0" firstAttribute="top" secondItem="edH-YB-UrR" secondAttribute="bottom" id="Jp3-EB-gX4"/>
                             <constraint firstItem="fUI-3b-Ph0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JpD-Rj-WVD"/>
                             <constraint firstItem="fUI-3b-Ph0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="6" id="Tfn-fX-3Qe"/>
                             <constraint firstItem="fUI-3b-Ph0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="6" id="XPw-Ms-spx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="et6-6c-4AI" secondAttribute="trailing" id="ajX-MO-PFr"/>
                             <constraint firstItem="edH-YB-UrR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxQ-dV-dN6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="edH-YB-UrR" secondAttribute="trailing" id="eaJ-wY-VBg"/>
                             <constraint firstItem="edH-YB-UrR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hA3-qV-fjq"/>
+                            <constraint firstItem="et6-6c-4AI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jaT-jk-16J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fUI-3b-Ph0" secondAttribute="trailing" id="mIA-IC-kfz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="credentialsView" destination="et6-6c-4AI" id="ha7-9g-qjf"/>
                         <outlet property="textOutput" destination="Yxg-bu-6Mk" id="w4g-nD-96k"/>
                         <outlet property="txt1fiIn" destination="H9G-gA-lbA" id="OEV-hC-A2R"/>
                     </connections>

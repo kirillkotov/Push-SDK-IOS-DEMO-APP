@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     //for production
     //let pushAdapterSdk = PushSDK(basePushURL: "https://example.com/api/")
+    @IBOutlet weak var credentialsView: UIView!
     
     @IBOutlet var textOutput: UITextView!
     @IBOutlet var txt1fiIn: MDCOutlinedTextField!
@@ -36,6 +37,10 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(onReceiveFromPushServer(_:)), name: .receivePushKData, object: nil)
         UNUserNotificationCenter.current().delegate = self
     
+    }
+    
+    @IBAction func showMainView(_ sender: UIButton) {
+        credentialsView.isHidden = true
     }
     
     /**
