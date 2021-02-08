@@ -210,16 +210,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et6-6c-4AI" userLabel="credentialsView">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7y-HW-BMc" customClass="MDCButton">
-                                        <rect key="frame" x="164" y="352" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="showMainView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FNy-3h-seo"/>
-                                        </connections>
-                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please provide credentials for the SDK" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-af-ymf">
+                                        <rect key="frame" x="12" y="0.0" width="351" height="367"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nzx-Td-6aS">
+                                        <rect key="frame" x="0.0" y="367" width="375" height="367"/>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="nzx-Td-6aS" firstAttribute="top" secondItem="3L2-af-ymf" secondAttribute="bottom" id="41L-kv-Fhf"/>
+                                    <constraint firstAttribute="trailing" secondItem="3L2-af-ymf" secondAttribute="trailing" constant="12" id="4zH-TC-kQb"/>
+                                    <constraint firstItem="nzx-Td-6aS" firstAttribute="height" secondItem="et6-6c-4AI" secondAttribute="height" multiplier="0.5" id="DdZ-EU-fwf"/>
+                                    <constraint firstAttribute="trailing" secondItem="nzx-Td-6aS" secondAttribute="trailing" id="Pnp-v3-0aJ"/>
+                                    <constraint firstItem="nzx-Td-6aS" firstAttribute="leading" secondItem="et6-6c-4AI" secondAttribute="leading" id="Pt7-XC-UFb"/>
+                                    <constraint firstItem="3L2-af-ymf" firstAttribute="top" secondItem="et6-6c-4AI" secondAttribute="top" id="dPd-fV-TBK"/>
+                                    <constraint firstItem="3L2-af-ymf" firstAttribute="leading" secondItem="et6-6c-4AI" secondAttribute="leading" constant="12" id="pme-9g-XCp"/>
+                                    <constraint firstAttribute="bottom" secondItem="nzx-Td-6aS" secondAttribute="bottom" id="x8V-0Y-CK6"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -253,6 +265,9 @@
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
